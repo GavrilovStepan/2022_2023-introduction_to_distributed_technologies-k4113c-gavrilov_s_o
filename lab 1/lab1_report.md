@@ -12,7 +12,7 @@ Date of finished: 27.11.2022
 # Лабораторная работа №1 "Установка Docker и Minikube, мой первый манифест."
 
 ## Описание
-В данной лабораторной работе необходимо протестировать Docker, установить Minikube и развернуть свой первый "под".
+В данной лабораторной работе необходимо установить Minikube и Docker? и развернуть свой первый "под".
 
 ## Цель работы
 Ознакомиться с инструментами Minikube и Docker, развернуть свой первый "под".
@@ -88,5 +88,5 @@ spec:
 ### Диаграмма
 Схема организации контейнера и сервиса, нарисованная в [draw.io](https://app.diagrams.net/).
 
-![Диаграмма](https://github.com/AnatoliyBr/2022_2023-introduction_to_distributed_technologies-k4111c-briushinin_a_a/blob/master/lab1/images/lab1_diagram.png 'Диаграмма')
+![Диаграмма](images/diagram.png 'Диаграмма')
 
