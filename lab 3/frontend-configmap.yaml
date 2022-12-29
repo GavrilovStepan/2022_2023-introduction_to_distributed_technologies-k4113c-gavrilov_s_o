@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-configmap
+data:
+  react_app_user_name: "stepan"
+  react_app_company_name: "ITMO"
