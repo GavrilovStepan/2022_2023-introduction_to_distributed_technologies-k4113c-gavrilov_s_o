@@ -30,14 +30,14 @@ minikube start --network-plugin=cni --cni=calico --nodes 2 -p multinode-demo
 ```
  kubectl get nodes
 ```
-![](/images/1.png)
+![](images/1.png)
 
 Проверяем работу CNI Calico, смотрим Pod'ы с меткой calico-node
 ```
 kubectl get pods -l k8s-app=calico-node -A
 ```
 
-![](/images/2.png)
+![](images/2.png)
 
 ### calicoctl и IPPool
 Назначаем IP адреса в Calico    
@@ -72,7 +72,7 @@ spec:
 
 Чтобы применить манифест для IPPool, надо установить **calicoctl**, для этого скачаем [config-файл](https://github.com/projectcalico/calico/blob/master/manifests/calicoctl.yaml) с официального репозитория и выполним команду: `kubectl create -f calicoctl.yaml`.
 
- ![](/images/3.png)
+ ![](images/3.png)
 
 
 Удаляем IPPool по-умолчанию:
@@ -80,7 +80,7 @@ spec:
 kubectl delete ippools default-ipv4-ippool
 ```
 
-![](/images/4.png)
+![](images/4.png)
 
 Создаем IPPool через командную строку (VS code выфдаёт ошыбку):
 ```
@@ -88,14 +88,14 @@ kubectl exec -i -n kube-system calicoctl -- /calicoctl --allow-version-mismatch 
 ```
 
 
-![](/images/5.png)
+![](images/5.png)
 
 Проверяем pool:
 ```
 kubectl exec -i -n kube-system calicoctl -- /calicoctl --allow-version-mismatch get ippool -o wide
 ```
 
-![](/images/6.png)
+![](images/6.png)
 
 
 
@@ -125,11 +125,11 @@ kubectl apply -f lab4-deployment.yaml -f lab4-service.yaml
 ```
 kubectl get deployments
 ```
-![](/images/7.png)
+![](images/7.png)
 ```
 kubectl get services
 ```
-![](/images/8.png)
+![](images/8.png)
 
 
 Проверяем IP созданных Pod'ов: 
@@ -137,7 +137,7 @@ kubectl get services
 kubectl get pods -o wide
 ```
 
-![](/images/9.png)
+![](images/9.png)
 
 
 Пробрасываем порт  
@@ -147,7 +147,7 @@ kubectl port-forward service/lab4-service 8200:3000
 
 Проверяем в браузере
 
-![](/images/10.png)
+![](images/10.png)
 
 ### Пингуем
 
@@ -156,7 +156,7 @@ kubectl port-forward service/lab4-service 8200:3000
 kubectl exec -ti lab4-deployment-64g68d64b4-d2g8d -- sh
 ```
 
-![](/images/11.png)
+![](images/11.png)
 
 Выходим с помощью 
 ``` 
@@ -167,10 +167,10 @@ exit
 kubectl exec -ti lab4-deployment-64g68d64b4-ct1hf -- sh
 ```
 
-![](/images/12.png)
+![](images/12.png)
 
 ### Диаграмма
 
 
-![](/images/13.png)
+![](images/13.png)
 
